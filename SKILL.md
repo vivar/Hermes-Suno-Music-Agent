@@ -277,6 +277,9 @@ The skill should always emphasize:
 
 ## Song Page & Interactive Workflow
 
+**Default Song Quality Rule**: Always aim for human, produced-sounding lyrics with natural flow, specific details, conversational phrasing, and rich performance tags. Avoid generic AI patterns, perfect rhymes, overly clean structures, and polished AI-sounding output unless the user explicitly requests a simpler style. The goal is to make every song feel crafted by a real artist.
+
+
 This skill follows a strict 8-step interactive process for creating complete song packages and HTML pages.
 
 ### Core Principle: User-Controlled Pacing
