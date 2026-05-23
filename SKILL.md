@@ -154,6 +154,7 @@ The skill can reference the following video guides:
 - `references/ltx-video.md` — Local LTX video prompting, strengths, and best practices
 - `references/wan-video.md` — Local WAN video prompting and motion control
 - `references/supergrok-video.md` — xAI SuperGrok video guidance
+- `references/harmonieh-youtube.md` — Mandatory YouTube description footer for the HarmoniEH channel (must be appended to every description)
 - `references/veo3-video.md` — Google Veo 3 cinematic video prompting
 - `references/klingai-video.md` — KlingAI character consistency and motion techniques
 - `references/minimax-video.md` — Minimax stylized and artistic video approach
@@ -279,7 +280,13 @@ The skill should always emphasize:
 
 **Default Song Quality Rule**: Always aim for human, produced-sounding lyrics with natural flow, specific details, conversational phrasing, and rich performance tags. Avoid generic AI patterns, perfect rhymes, overly clean structures, and polished AI-sounding output unless the user explicitly requests a simpler style. The goal is to make every song feel crafted by a real artist.
 
+**Phase Commit Rule** (Strict):
+- When any phase is complete (especially after finalizing Lyrics & Suno Prompt), you MUST immediately create and write the corresponding output file (`<Song Title>-lyrics.md`, then later `-image.md` and `-video.md`) in the **correct channel/project folder** before offering or generating content for the next phase.
+- Never proceed to image prompts, video direction, or HTML until the previous phase’s file has been explicitly created and saved.
+- Always confirm the target folder with the user if there is any ambiguity (e.g. HarmoniEH vs other channels).
+- This is a hard workflow gate. Violating this breaks the user’s expected process.
 
+This skill follows a strict 8-step interactive process for creating complete song packages and HTML pages. The user must explicitly request to move to each next step.
 This skill follows a strict 8-step interactive process for creating complete song packages and HTML pages.
 
 ### Core Principle: User-Controlled Pacing
